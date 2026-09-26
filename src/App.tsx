@@ -115,16 +115,16 @@ function App() {
                       </picture>
                       <button
                         onClick={() => handleAddToCart(index)}
-                        className={`absolute bottom-0 left-1/2 z-10 inline-flex min-w-max -translate-x-1/2 translate-y-1/2 items-center gap-3 whitespace-nowrap rounded-full border border-brand-red bg-white px-4 py-2 ${itemQuantity > 0 ? "hidden" : ""}`}
+                        className={`border border-brand-red whitespace-nowrap items-center rounded-4xl md:gap-2 md:px-3 lg:gap-3 lg:px-4 gap-3 py-2 px-4 absolute left-1/2 -translate-x-1/2 z-10 min-w-max translate-y-1/2 bottom-0 bg-white  ${itemQuantity > 0 ? "hidden" : "inline-flex"}`}
                       >
                         <img
                           src="../assets/images/icon-add-to-cart.svg"
                           alt="cart icon"
                         />
-                        Add to Cart
+                        <span className="min-[768px]:max-[900px]:hidden md:text-xs lg:text-base">Add to Cart</span>
                       </button>
                       <div
-                        className={`absolute bottom-0 left-1/2 z-10 -translate-x-1/2 translate-y-1/2 rounded-full bg-brand-red px-4 py-2 ${itemQuantity > 0 ? "flex items-center gap-9" : "hidden"}`}
+                        className={`bg-brand-red rounded-4xl py-2 px-4 md:px-3 md:gap-3 lg:px-4 lg:gap-9 absolute left-1/2 -translate-x-1/2 translate-y-1/2 bottom-0 ${itemQuantity > 0 ? "flex gap-9 items-center" : "hidden"} `}
                       >
                         <button
                           type="button"
